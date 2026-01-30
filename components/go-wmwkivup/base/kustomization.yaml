@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: go-wmwkivup
+  janus-idp.io/tekton: go-wmwkivup
+  backstage.io/kubernetes-id: go-wmwkivup
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: go-wmwkivup
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
